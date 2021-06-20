@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <h1 class="titleTool">Creatives Tool</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="toolStyle">
+                    <div class="form-group">
+                        <label for="InputUrlVideo">URL Video</label>
+                        <input type="text" class="form-control" id="InputUrlVideo">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputIframeHeight">iframe height</label>
+                        <input type="text" class="form-control" id="inputIframeHeight">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputIframeWidth">iframe width</label>
+                        <input type="text" class="form-control" id="inputIframeWidth">
+                    </div>
+                    <br>
+                    <input type="button" onclick="GenerateCreative();" class="btn btn-primary"
+                        value="Create Creative"></input>
+                    <br>
+                    <br>
+                    <textarea class="form-control textAreaScript" readonly id="TextScript"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <div class="toolStyle">
+                    <div id="divIframe">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script src="./formJS.js"></script>
+
+</html>

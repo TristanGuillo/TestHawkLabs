@@ -1,0 +1,35 @@
+<html>
+<body>
+    
+    <!-- comment faire passer cette variable à l’iframe ? (la valeur de cette variable doit être utilisée dans le fichier
+“publicite.html”) 
+
+PLusieurs possibilité
+
+1. Ajouter une query string dans la source de l'iframe 
+        -> il suffit ensuite de recuperer la donnée dans l'url
+        Data : macro = Test
+
+2. Utilisation des PostMessages
+        Data : macro2 = Test2
+
+
+-->
+<!-- Pass Data in URL -->
+<iframe id="iframe" src="./indexTest1.html?macro=Test" height="640" width="360"></iframe>
+
+<script>
+    var macro = 'Test';
+    var macro2 = 'Test2';
+
+    var iframe = document.getElementById('iframe');
+
+    // Post Message to iframe
+    iframe.onload = function(){
+        iframe.contentWindow.postMessage(macro2, "*");
+    }
+</script>
+
+</body>
+
+</html>
